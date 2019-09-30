@@ -28,13 +28,10 @@ RUN APT_INSTALL="apt-get install -y --no-install-recommends" && \
         wget \
         git \
         vim \
+        cmake \
         && \
 
-    $GIT_CLONE https://github.com/Kitware/CMake ~/cmake && \
-    cd ~/cmake && \
-    ./bootstrap && \
-    make -j"$(nproc)" install && \
-
+   
 # ==================================================================
 # python
 # ------------------------------------------------------------------
